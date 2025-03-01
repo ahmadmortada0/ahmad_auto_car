@@ -1,4 +1,4 @@
-class Vehicals :
+class Vehicles :
     def __init__ (self ,brand,model,year,rental):
         self.brand=brand 
         self.model=model
@@ -17,7 +17,7 @@ class Vehicals :
 
         
     
-class Car(Vehicals):
+class Car(Vehicles):
     def __init__(self, brand, model, year, rental,seating_capacity):
         super().__init__(brand, model, year, rental)
         self.seating_capacity=seating_capacity
@@ -26,7 +26,7 @@ class Car(Vehicals):
     def display_info(self):
         print(f"Car :{super().display_info()} and seating capacity is {self.seating_capacity}")
 
-class Bike(Vehicals):
+class Bike(Vehicles):
     def __init__(self, brand, model, year, rental,engine_capacity):
         super().__init__(brand, model, year, rental)
         self.engine_capacity=str(engine_capacity)+"CC"
@@ -44,6 +44,6 @@ print(car.calculate_rental_cost(5))
 print(bike.calculate_rental_cost(15))
 car.setRental(55)
 print(car.calculate_rental_cost(5))
-def showVehicalInfo(Vehical : Vehicals):
-    Vehical.display_info()
-showVehicalInfo(car)
+def showVehicleInfo(Vehicle : Vehicles):
+    Vehicle.display_info()
+showVehicleInfo(car)
